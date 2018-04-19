@@ -15,9 +15,13 @@ public class VoteService {
 
 	public static Collegue GestionScore(Collegue collegue, VoteActionIhm action) {
 		if (action.getAction().equals(Avis.AIMER)) {
-			collegue.setScore(collegue.getScore() + 1);
+			if (collegue.getScore() < 1000) {
+				collegue.setScore(collegue.getScore() + 1);
+			}
 		} else {
-			collegue.setScore(collegue.getScore() - 1);
+			if (collegue.getScore() > -1000) {
+				collegue.setScore(collegue.getScore() - 1);
+			}
 		}
 		return collegue;
 	}
