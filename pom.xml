@@ -54,6 +54,11 @@
 			<artifactId>mariadb-java-client</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -78,15 +83,15 @@
 
 	<profiles>
 		<profile>
-			<id>h2</id>
+			<id>postgredb</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<jdbc.driver>org.h2.Driver</jdbc.driver>
-				<jdbc.url>jdbc:h2:mem:top_collegues_bdd</jdbc.url>
-				<jdbc.user>sa</jdbc.user>
-				<jdbc.pass></jdbc.pass>
+				<jdbc.driver>org.postgresql.Driver</jdbc.driver>
+				<jdbc.url>jdbc:postgresql://${env.POSTGRESQL_ADDON_HOST}:${env.POSTGRESQL_ADDON_PORT}/${env.POSTGRESQL_ADDON_DB}</jdbc.url>
+				<jdbc.user>${env.POSTGRESQL_ADDON_USER}</jdbc.user>
+				<jdbc.pass>${env.POSTGRESQL_ADDON_PASSWORD}</jdbc.pass>
 			</properties>
 		</profile>
 		<profile>
