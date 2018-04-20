@@ -32,37 +32,53 @@ public class StartUpAppListener {
 			List<Collegue> listeCollegue = new ArrayList<>();
 
 			listeCollegue.add(new Collegue("Dio-Sama",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/dio-brando-jojos-bizarre-adventure-all-star-battle-22.2.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/dio-brando-jojos-bizarre-adventure-all-star-battle-22.2.jpg",
+					"dio-sama@leplusbeau.com", "Londres"));
 			listeCollegue.add(new Collegue("Jonathan Joestar",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/jonathan-joestar-jojos-bizarre-adventure-all-star-battle-81.5.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/jonathan-joestar-jojos-bizarre-adventure-all-star-battle-81.5.jpg",
+					"jonathan-joestar@lehero.com", "Londres"));
 			listeCollegue.add(new Collegue("Jotaro Kujo",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/jotaro-kujo-jojos-bizarre-adventure-all-star-battle-9.02.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/jotaro-kujo-jojos-bizarre-adventure-all-star-battle-9.02.jpg",
+					"jotaro-kujo@letaciturne.com", "Japon"));
 			listeCollegue.add(new Collegue("Joseph Joestar",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/joseph-joestar-jojos-bizarre-adventure-all-star-battle-5.35.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/joseph-joestar-jojos-bizarre-adventure-all-star-battle-5.35.jpg",
+					"joseph-joestar@ohmygod.com", "Londres"));
 			listeCollegue.add(new Collegue("Kars",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/kars-jojos-bizarre-adventure-all-star-battle-47.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/kars-jojos-bizarre-adventure-all-star-battle-47.jpg",
+					"kars@letreparfait.com", "Mexique"));
 			listeCollegue.add(new Collegue("Will A Zeppeli",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/will-a-zeppeli-jojos-bizarre-adventure-all-star-battle-91.9.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/will-a-zeppeli-jojos-bizarre-adventure-all-star-battle-91.9.jpg",
+					"Will-a-Zeppeli@legentleman.com", "Italie"));
 			listeCollegue.add(new Collegue("Caesar Anthonio Zeppeli",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/caesar-anthonio-zeppeli-jojos-bizarre-adventure-all-star-battle-4.02.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/caesar-anthonio-zeppeli-jojos-bizarre-adventure-all-star-battle-4.02.jpg",
+					"caesar-anthonio-zeppeli@lesavonneux.com", "Italie"));
 			listeCollegue.add(new Collegue("Lisa Lisa",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/lisa-lisa-jojos-bizarre-adventure-all-star-battle-8.3.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/lisa-lisa-jojos-bizarre-adventure-all-star-battle-8.3.jpg",
+					"lisa-lisa@laprof.com", "Londres"));
 			listeCollegue.add(new Collegue("Mohammed Avdol",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/mohammed-avdol-jojos-bizarre-adventure-all-star-battle-30.6.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/mohammed-avdol-jojos-bizarre-adventure-all-star-battle-30.6.jpg",
+					"mohammed-avdol@lesage.com", "Egypte"));
 			listeCollegue.add(new Collegue("Jean Pierre Polnareff",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/jean-pierre-polnareff-jojos-bizarre-adventure-all-star-battle-97.1.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/jean-pierre-polnareff-jojos-bizarre-adventure-all-star-battle-97.1.jpg",
+					"jeanpierre-polnareff@vivelafrance.com", "Paris"));
 			listeCollegue.add(new Collegue("Noriaki Kakyoin",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/noriaki-kakyoin-jojos-bizarre-adventure-all-star-battle-5.16.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/noriaki-kakyoin-jojos-bizarre-adventure-all-star-battle-5.16.jpg",
+					"noriaki-kakyoin@lesociopathe.com", "Japon"));
 			listeCollegue.add(new Collegue("Iggy",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/iggy-jojos-bizarre-adventure-all-star-battle-5.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/iggy-jojos-bizarre-adventure-all-star-battle-5.jpg",
+					"iggy@lechien.com", "Egypte"));
 			listeCollegue.add(new Collegue("Esidisi",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/esidisi-jojos-bizarre-adventure-all-star-battle-83.5.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/esidisi-jojos-bizarre-adventure-all-star-battle-83.5.jpg",
+					"esidisi@lesanguin.com", "Mexique"));
 			listeCollegue.add(new Collegue("Wamuu",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/wamuu-jojos-bizarre-adventure-all-star-battle-1.14.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/wamuu-jojos-bizarre-adventure-all-star-battle-1.14.jpg",
+					"wamuu@latempete.com", "Mexique"));
 			listeCollegue.add(new Collegue("Joline Cujoh",
-					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/jolyne-cujoh-jojos-bizarre-adventure-all-star-battle-3.46.jpg"));
+					"http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/jolyne-cujoh-jojos-bizarre-adventure-all-star-battle-3.46.jpg",
+					"joline-cujoh@leprisonnier.com", "Japon"));
 
 			listeCollegue.forEach(collegueRepository::save);
+
 		}
 	}
 }

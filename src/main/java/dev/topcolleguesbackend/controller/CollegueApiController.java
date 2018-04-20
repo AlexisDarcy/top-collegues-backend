@@ -37,6 +37,25 @@ public class CollegueApiController {
 		return this.collegueRepository.findAll();
 	}
 
+	@GetMapping(path = { "/top" })
+	public List<Collegue> TopCollegue() {
+		return this.collegueRepository.findTop4ByOrderByScoreDesc();
+	}
+
+	@GetMapping(path = { "/flop" })
+	public List<Collegue> FlopCollegue() {
+		return this.collegueRepository.findTop4ByOrderByScoreAsc();
+	}
+
+	@GetMapping(path = { "/{nom}" })
+	public Collegue afficherCollaborateur(@PathVariable("nom") String nom) {
+		Collegue collegue = new Collegue();
+		if (!nom.isEmpty()) {
+			collegue = this.collegueRepository.findByNom(nom);
+		}
+		return collegue;
+	}
+
 	@PatchMapping(path = { "/{name}" })
 	public Collegue scoreCollegue(@PathVariable("name") String name, @RequestBody VoteActionIhm action) {
 		Collegue updateCollegue = new Collegue();

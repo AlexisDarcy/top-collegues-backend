@@ -35,6 +35,12 @@ public class Collegue {
 	/** photo : String */
 	@Column(name = "PHOTO", nullable = false)
 	private String photo;
+	/** score : Integer */
+	@Column(name = "EMAIL", nullable = false)
+	private String email;
+	/** photo : String */
+	@Column(name = "PAYS", nullable = false)
+	private String pays;
 
 	/**
 	 * Constructeur
@@ -55,6 +61,23 @@ public class Collegue {
 		this.nom = nom;
 		this.score = 0;
 		this.photo = photo;
+	}
+
+	/**
+	 * Constructeur
+	 * 
+	 * @param nom
+	 * @param photo
+	 * @param email
+	 * @param adresse
+	 */
+	public Collegue(String nom, String photo, String email, String pays) {
+		super();
+		this.nom = nom;
+		this.score = 0;
+		this.photo = photo;
+		this.email = email;
+		this.pays = pays;
 	}
 
 	/**
@@ -121,6 +144,44 @@ public class Collegue {
 	 */
 	public void setPhoto(String photo) {
 		this.photo = photo;
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param email
+	 *            the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return the pays
+	 */
+	public String getPays() {
+		return pays;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param pays
+	 *            the pays to set
+	 */
+	public void setPays(String pays) {
+		this.pays = pays;
 	}
 
 }
