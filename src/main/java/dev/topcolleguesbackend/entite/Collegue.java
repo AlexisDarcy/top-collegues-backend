@@ -5,8 +5,6 @@ package dev.topcolleguesbackend.entite;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -22,12 +20,17 @@ public class Collegue {
 
 	/** id : int */
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonIgnore
-	@Column(name = "ID")
-	private int id;
+	@Column(name = "MATRICULE", nullable = false, unique = true)
+	private String matricule;
+	/** pseudo : String */
+	@Column(name = "PSEUDO", nullable = false, unique = true)
+	private String pseudo;
+	/** prenom : String */
+	@Column(name = "PRENOM", nullable = false)
+	private String prenom;
 	/**nom : String*/
-	@Column(name = "NOM", nullable = false, unique = true)
+	@Column(name = "NOM", nullable = false)
 	private String nom;
 	/** score : Integer */
 	@Column(name = "SCORE", nullable = false)
@@ -55,24 +58,15 @@ public class Collegue {
 	 * 
 	 * @param nom
 	 * @param photo
-	 */
-	public Collegue(String nom, String photo) {
-		super();
-		this.nom = nom;
-		this.score = 0;
-		this.photo = photo;
-	}
-
-	/**
-	 * Constructeur
-	 * 
-	 * @param nom
-	 * @param photo
 	 * @param email
 	 * @param adresse
 	 */
-	public Collegue(String nom, String photo, String email, String pays) {
+	public Collegue(String matricule, String pseudo, String prenom, String nom, String photo, String email,
+			String pays) {
 		super();
+		this.matricule = matricule;
+		this.pseudo = pseudo;
+		this.prenom = prenom;
 		this.nom = nom;
 		this.score = 0;
 		this.photo = photo;
@@ -83,10 +77,58 @@ public class Collegue {
 	/**
 	 * Getter
 	 * 
-	 * @return the id
+	 * @return the matricule
 	 */
-	public int getId() {
-		return id;
+	public String getMatricule() {
+		return matricule;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param matricule
+	 *            the matricule to set
+	 */
+	public void setMatricule(String matricule) {
+		this.matricule = matricule;
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return the pseudo
+	 */
+	public String getPseudo() {
+		return pseudo;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param pseudo
+	 *            the pseudo to set
+	 */
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
+	}
+
+	/**
+	 * Getter
+	 * 
+	 * @return the prenom
+	 */
+	public String getPrenom() {
+		return prenom;
+	}
+
+	/**
+	 * Setter
+	 * 
+	 * @param prenom
+	 *            the prenom to set
+	 */
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
 
 	/**

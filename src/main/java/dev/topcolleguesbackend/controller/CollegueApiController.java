@@ -10,14 +10,16 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.topcolleguesbackend.entite.Collegue;
+import dev.topcolleguesbackend.model.ViewCollegue;
 import dev.topcolleguesbackend.model.VoteActionIhm;
 import dev.topcolleguesbackend.repository.CollegueRepository;
-import dev.topcolleguesbackend.service.VoteService;
+import dev.topcolleguesbackend.service.CollegueService;
 
 /**
  * @author Alexis Darcy
@@ -30,6 +32,9 @@ public class CollegueApiController {
 
 	@Autowired
 	private CollegueRepository collegueRepository;
+
+	@Autowired
+	private CollegueService collegueService;
 
 
 	@GetMapping
@@ -47,25 +52,27 @@ public class CollegueApiController {
 		return this.collegueRepository.findTop4ByOrderByScoreAsc();
 	}
 
-	@GetMapping(path = { "/{nom}" })
-	public Collegue afficherCollaborateur(@PathVariable("nom") String nom) {
+	@GetMapping(path = { "/{pseudo}" })
+	public Collegue afficherCollegue(@PathVariable("pseudo") String pseudo) {
 		Collegue collegue = new Collegue();
-		if (!nom.isEmpty()) {
-			collegue = this.collegueRepository.findByNom(nom);
+		if (!pseudo.isEmpty()) {
+			collegue = this.collegueRepository.findByPseudo(pseudo);
 		}
 		return collegue;
 	}
 
-	@PatchMapping(path = { "/{name}" })
-	public Collegue scoreCollegue(@PathVariable("name") String name, @RequestBody VoteActionIhm action) {
+	@PatchMapping(path = { "/{pseudo}" })
+	public Collegue scoreCollegue(@PathVariable("pseudo") String pseudo, @RequestBody VoteActionIhm action) {
 		Collegue updateCollegue = new Collegue();
-		if (this.collegueRepository.existsByNom(name)) {
-			updateCollegue = this.collegueRepository.findByNom(name);
-			updateCollegue = VoteService.GestionScore(updateCollegue, action);
-		}
-		this.collegueRepository.save(updateCollegue);
+		updateCollegue = collegueService.GestionScore(pseudo, action);
 		return updateCollegue;
 	}
-
+	
+	@PostMapping(path = { "/nouveau" })
+	public void ajouterCollegue(@RequestBody ViewCollegue newCollegue) {
+		if (newCollegue != null) {
+			collegueService.GestionCollegue(newCollegue);
+		}
+	}
 }
 
