@@ -29,7 +29,7 @@ public class CollegueService {
 	@Autowired
 	private CollegueRepository collegueRepository;
 
-	private String url = "http://collegues-api.cleverapps.io/collegues";
+	private final String URL = "http://collegues-api.cleverapps.io/collegues";
 
 	public Collegue GestionScore(String pseudo, VoteActionIhm action) {
 		Collegue updateCollegue = new Collegue();
@@ -57,7 +57,7 @@ public class CollegueService {
 	public void GestionCollegue(ViewCollegue newCollegue) {
 
 		RestTemplate restTemplate = new RestTemplate();
-		ResponseEntity<ApiCollegue[]> response  = restTemplate.getForEntity(url, ApiCollegue[].class);
+		ResponseEntity<ApiCollegue[]> response = restTemplate.getForEntity(URL, ApiCollegue[].class);
 		List<ApiCollegue> listApiCollegue = Arrays.asList(response.getBody());
 		
 		Optional<ApiCollegue> collegueTrouve = listApiCollegue.stream()
